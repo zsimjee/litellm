@@ -18,7 +18,7 @@ const sidebars = {
   // But you can create a sidebar manually
   tutorialSidebar: [
     { type: "doc", id: "index" }, // NEW
-    
+
     {
       type: "category",
       label: "LiteLLM Proxy Server",
@@ -31,9 +31,13 @@ const sidebars = {
       items: [
         "proxy/docker_quick_start",
         {
-          "type": "category",
-          "label": "Config.yaml",
-          "items": ["proxy/configs", "proxy/config_management", "proxy/config_settings"]
+          type: "category",
+          label: "Config.yaml",
+          items: [
+            "proxy/configs",
+            "proxy/config_management",
+            "proxy/config_settings",
+          ],
         },
         {
           type: "category",
@@ -54,7 +58,16 @@ const sidebars = {
         {
           type: "category",
           label: "Architecture",
-          items: ["proxy/architecture", "proxy/db_info", "proxy/db_deadlocks", "router_architecture", "proxy/user_management_heirarchy", "proxy/jwt_auth_arch", "proxy/image_handling"],
+          items: [
+            "proxy/architecture",
+            "proxy/db_info",
+            "proxy/db_deadlocks",
+            "router_architecture",
+            "proxy/user_management_heirarchy",
+            "proxy/jwt_auth_arch",
+            "proxy/image_handling",
+            "proxy/spend_log_cleanup",
+          ],
         },
         {
           type: "link",
@@ -92,10 +105,7 @@ const sidebars = {
         {
           type: "category",
           label: "Model Access",
-          items: [
-            "proxy/model_access",
-            "proxy/team_model_add"
-          ]
+          items: ["proxy/model_access", "proxy/team_model_add"],
         },
         {
           type: "category",
@@ -111,22 +121,29 @@ const sidebars = {
             {
               type: "category",
               label: "UI Logs",
-              items: [
-                "proxy/ui_logs",
-                "proxy/ui_logs_sessions"
-              ]
-            }
+              items: ["proxy/ui_logs", "proxy/ui_logs_sessions"],
+            },
           ],
         },
         {
           type: "category",
           label: "Spend Tracking",
-          items: ["proxy/cost_tracking", "proxy/custom_pricing", "proxy/billing",],
+          items: [
+            "proxy/cost_tracking",
+            "proxy/custom_pricing",
+            "proxy/billing",
+          ],
         },
         {
           type: "category",
           label: "Budgets + Rate Limits",
-          items: ["proxy/users", "proxy/temporary_budget_increase", "proxy/rate_limit_tiers", "proxy/team_budgets", "proxy/customers"],
+          items: [
+            "proxy/users",
+            "proxy/temporary_budget_increase",
+            "proxy/rate_limit_tiers",
+            "proxy/team_budgets",
+            "proxy/customers",
+          ],
         },
         {
           type: "link",
@@ -142,7 +159,8 @@ const sidebars = {
             "proxy/team_logging",
             "proxy/prometheus",
             "proxy/alerting",
-            "proxy/pagerduty"],
+            "proxy/pagerduty",
+          ],
         },
         {
           type: "category",
@@ -165,22 +183,16 @@ const sidebars = {
         {
           type: "category",
           label: "Secret Managers",
-          items: [
-            "secret",
-            "oidc"
-          ]
+          items: ["secret", "oidc"],
         },
         {
           type: "category",
           label: "Create Custom Plugins",
           description: "Modify requests, responses, and more",
-          items: [
-            "proxy/call_hooks",
-            "proxy/rules",
-          ]
+          items: ["proxy/call_hooks", "proxy/rules"],
         },
         "proxy/caching",
-      ]
+      ],
     },
     {
       type: "category",
@@ -202,11 +214,7 @@ const sidebars = {
             description: "Details on the completion() function",
             slug: "/completion",
           },
-          items: [
-            "completion/input",
-            "completion/output",
-            "completion/usage",
-          ],
+          items: ["completion/input", "completion/output", "completion/usage"],
         },
         "response_api",
         "text_completion",
@@ -216,18 +224,12 @@ const sidebars = {
         {
           type: "category",
           label: "/images",
-          items: [
-            "image_generation",
-            "image_variations",
-          ]
+          items: ["image_generation", "image_variations"],
         },
         {
           type: "category",
           label: "/audio",
-          "items": [
-            "audio_transcription",
-            "text_to_speech",
-          ]
+          items: ["audio_transcription", "text_to_speech"],
         },
         {
           type: "category",
@@ -253,18 +255,12 @@ const sidebars = {
         {
           type: "category",
           label: "/files",
-          items: [
-            "files_endpoints",
-            "proxy/litellm_managed_files",
-          ],
+          items: ["files_endpoints", "proxy/litellm_managed_files"],
         },
         {
           type: "category",
           label: "/batches",
-          items: [
-            "batches",
-            "proxy/managed_batches",
-          ]
+          items: ["batches", "proxy/managed_batches"],
         },
         "realtime",
         "fine_tuning",
@@ -289,7 +285,7 @@ const sidebars = {
             "providers/openai",
             "providers/openai/responses_api",
             "providers/openai/text_to_speech",
-          ]
+          ],
         },
         "providers/text_completion_openai",
         "providers/openai_compatible",
@@ -301,20 +297,14 @@ const sidebars = {
         {
           type: "category",
           label: "Google AI Studio",
-          items: [
-            "providers/gemini",
-            "providers/google_ai_studio/files",
-          ]
+          items: ["providers/gemini", "providers/google_ai_studio/files"],
         },
         "providers/anthropic",
         "providers/aws_sagemaker",
         {
           type: "category",
           label: "Bedrock",
-          items: [
-            "providers/bedrock",
-            "providers/bedrock_vector_store",
-          ]
+          items: ["providers/bedrock", "providers/bedrock_vector_store"],
         },
         "providers/litellm_proxy",
         "providers/meta_llama",
@@ -363,7 +353,7 @@ const sidebars = {
         "providers/sambanova",
         "providers/custom_llm_server",
         "providers/petals",
-        "providers/snowflake"
+        "providers/snowflake",
       ],
     },
     {
@@ -393,20 +383,29 @@ const sidebars = {
         "completion/batching",
         "completion/mock_requests",
         "completion/reliable_completions",
-
-      ]
+      ],
     },
-    
+
     {
       type: "category",
       label: "Routing, Loadbalancing & Fallbacks",
       link: {
         type: "generated-index",
         title: "Routing, Loadbalancing & Fallbacks",
-        description: "Learn how to load balance, route, and set fallbacks for your LLM requests",
+        description:
+          "Learn how to load balance, route, and set fallbacks for your LLM requests",
         slug: "/routing-load-balancing",
       },
-      items: ["routing", "scheduler", "proxy/load_balancing", "proxy/reliability", "proxy/timeout", "proxy/tag_routing", "proxy/provider_budget_routing", "wildcard_routing"],
+      items: [
+        "routing",
+        "scheduler",
+        "proxy/load_balancing",
+        "proxy/reliability",
+        "proxy/timeout",
+        "proxy/tag_routing",
+        "proxy/provider_budget_routing",
+        "wildcard_routing",
+      ],
     },
     {
       type: "category",
@@ -430,10 +429,7 @@ const sidebars = {
     {
       type: "category",
       label: "[Beta] Prompt Management",
-      items: [
-        "proxy/prompt_management",
-        "proxy/custom_prompt_management"
-      ],
+      items: ["proxy/prompt_management", "proxy/custom_prompt_management"],
     },
     {
       type: "category",
@@ -443,7 +439,7 @@ const sidebars = {
         "load_test_advanced",
         "load_test_sdk",
         "load_test_rpm",
-      ]
+      ],
     },
     {
       type: "category",
@@ -490,14 +486,14 @@ const sidebars = {
         "tutorials/msft_sso",
         "tutorials/prompt_caching",
         "tutorials/tag_management",
-        'tutorials/litellm_proxy_aporia',
+        "tutorials/litellm_proxy_aporia",
         {
           type: "category",
           label: "LiteLLM Python SDK Tutorials",
           items: [
-            'tutorials/google_adk',
-            'tutorials/azure_openai',
-            'tutorials/instructor',
+            "tutorials/google_adk",
+            "tutorials/azure_openai",
+            "tutorials/instructor",
             "tutorials/gradio_integration",
             "tutorials/huggingface_codellama",
             "tutorials/huggingface_tutorial",
@@ -508,7 +504,7 @@ const sidebars = {
             "tutorials/model_fallbacks",
           ],
         },
-      ]
+      ],
     },
     {
       type: "category",
@@ -520,11 +516,12 @@ const sidebars = {
           label: "Adding Providers",
           items: [
             "adding_provider/directory_structure",
-            "adding_provider/new_rerank_provider"],
+            "adding_provider/new_rerank_provider",
+          ],
         },
         "extras/contributing",
         "contributing",
-      ]
+      ],
     },
     {
       type: "category",
